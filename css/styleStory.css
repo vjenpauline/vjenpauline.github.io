@@ -1,0 +1,142 @@
+:root { /* VARIABLES FOR SCALE */
+  --scale: 0.1;
+  --space: 8vmin;
+}
+
+.backBtn1 {  /* Styling of button BACK to homepage */
+  border: 1px solid white;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 95em;
+  margin-top: 2em;
+  padding: 3.5px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  width: 70px;
+  z-index: 2;
+}
+
+.backBtn1:hover {
+  background-color: white;
+  border: none;
+  color: black;
+  font-weight: 900;
+}
+
+@media (prefers-reduced-motion) {
+  :root {
+    --scale: 0;
+  }
+}
+
+p {
+  font-family: "Montserrat";
+  color: white;
+}
+
+/* PARALLAX WITH HELP FROM: https://codepen.io/hexagoncircle/pen/JjRYaZw */
+body {
+  background-color: hsl(5, 15%, 5%);
+  color: #dcc194;
+  font-size: clamp(1.2rem, 5vw, 1.5rem); /* Adds minimum and maximum size */
+  line-height: 1.6;
+}
+
+.section {
+  transform-origin: center top;
+  transform: scaleY(calc(1 - var(--scale))); /* Resizes section */
+}
+
+.section>* {
+  transform-origin: center top;
+  transform: scaleY(calc(1 / (1 - var(--scale)))); 
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: bold;
+  line-height: 1.125;
+}
+
+.content {
+  animation: slideDown 2s; /* Sections' slide down entrances */
+  background: hsla(5, 15%, 5%, 0.9);
+  margin: -50vh auto 0;
+  max-width: 55ch;
+  padding: var(--space);
+  position: relative;
+  width: calc(100% - var(--space));
+}
+
+.content>*+* {
+  margin-top: 2rem;
+}
+
+.image-container { 
+  height: 100vh;
+  position: sticky; /* Using sticky for a fixed background scroll (parallax) */
+  top: 0;
+  width: 100vw;
+  z-index: -2;
+}
+
+.image-container img { /* Styling for no image distortion */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; 
+  background: linear-gradient(to bottom, /* Gradient black border on bottom of images */
+      hsla(5, 15%, 5%, 0) 0%,
+      hsla(5, 15%, 5%, 0.013) 8.1%,
+      hsla(5, 15%, 5%, 0.049) 15.5%,
+      hsla(5, 15%, 5%, 0.104) 22.5%,
+      hsla(5, 15%, 5%, 0.175) 29%,
+      hsla(5, 15%, 5%, 0.259) 35.3%,
+      hsla(5, 15%, 5%, 0.352) 41.2%,
+      hsla(5, 15%, 5%, 0.45) 47.1%,
+      hsla(5, 15%, 5%, 0.55) 52.9%,
+      hsla(5, 15%, 5%, 0.648) 58.8%,
+      hsla(5, 15%, 5%, 0.741) 64.7%,
+      hsla(5, 15%, 5%, 0.825) 71%,
+      hsla(5, 15%, 5%, 0.896) 77.5%,
+      hsla(5, 15%, 5%, 0.951) 84.5%,
+      hsla(5, 15%, 5%, 0.987) 91.9%,
+      hsl(5, 15%, 5%) 100%);
+}
+
+/* Fade in animation */
+@keyframes fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

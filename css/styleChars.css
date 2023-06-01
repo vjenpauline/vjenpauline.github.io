@@ -1,0 +1,58 @@
+/* for characters */
+.carousel-container div { 
+  color: #fff;
+  font-size: 3rem;
+  opacity: 0.9;
+  padding: 0 5px;
+  transition: 300ms;
+}
+
+.carousel {
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 215.2vh;
+
+  .content {
+    display: flex; /* Positions parts in a row */
+    height: 100%;
+    transition: 500ms ease-in-out; /* Adds transition */
+
+    >* {
+      min-width: 100%; /* No image distortion */
+      object-fit: cover;
+    }
+  }
+
+  .navigation {
+    cursor: pointer;
+    display: flex; /* Separates buttons */
+    justify-content: space-between;
+    position: absolute;
+    top: 50%; /* Places buttons in the middle */
+    transform: translateY(-50%);
+    width: 100%; 
+  }
+}
+
+.previous:active,
+.next:active {
+  color: red;
+}
+
+p {
+  color: #dcc194;
+  font-size: 8vh;
+  font-weight: bold;
+  line-height: 40px;
+  padding: 20vh 40vh 0 40vh;
+  text-align: center;
+}
+
+.charDesc {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 4vh;
+  font-weight: initial;
+}

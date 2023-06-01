@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="css/photos/icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Volkhov:200,400,700" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+  <script src="script.js" type="text/javascript"></script>
+  <title>What Remains of Edith Finch</title>
+</head>
+
+<body>
+  <!-- FOR THE SIDE MENU BUTTON -->
+  <header class="headerContainer" id="toggleBtn">
+    <div class="logoContainer">
+      <button class="headerBtn" onclick="menuShow()">
+        <img src="css/photos/headerlogo.png" />
+      </button>
+    </div>
+  </header>
+
+  <!-- FOR THE SIDE MENU CONTENTS -->
+  <!-- SOME CODE USED WITH THE HELP OF: https://www.youtube.com/watch?v=qn1tcSaJ5XQ -->
+  <div class="sideMenu" id="hidden">
+    <div class="primaryMenu"> <!-- MAIN 3 HYPERLINKS -->
+      <div class="headerDrawer">
+        <ul class="headerMenu">
+          <li class="headerItem">
+            <a class="headerLink" href="characters.html">
+              <span>I</span> CHARACTERS
+            </a>
+          </li>
+          <li class="headerItem">
+            <a class="headerLink" href="mechanics.html">
+              <span>II</span> MECHANICS
+            </a>
+          </li>
+          <li class="headerItem">
+            <a class="headerLink" href="story.html">
+              <span>III</span> STORY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="secondaryMenu"> <!-- SMALLER MENU BESIDE MAIN MENU -->
+      <div class="headerDrawer">
+        <ul class="headerMenu">
+          <li class="headerItem">
+            <a class="headerLink" href="index.html"> HOME </a>
+          </li>
+          <li class="headerItem">
+            <a class="headerLink" href="news & info.html"> NEWS </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOR THE NAVIGATION BAR ON TOP RIGHT CORNER -->
+  <div class="navContainer">
+    <div class="navbar">
+      <a href="index.html" id="homeBtn"><span style="font-weight: 900">HOMEPAGE</span> |
+      </a>
+      <a href="characters.html"> CHARACTERS </a>
+      <a href="mechanics.html"> MECHANICS </a>
+      <a href="story.html"> STORY </a>
+      <a href="news & info.html"> NEWS & INFO </a>
+    </div>
+  </div>
+
+  <!-- THE HOME PAGE INTRO WITH PARALLAX -->
+  <section class="home">
+    <div class="overlay">
+      <div class="bg-border"></div> <!-- ADDS THE LEAVES BORDER -->
+    </div>
+    <div class="hero-text"><img id="logo" src="css/photos/logo.png" /></div> <!-- INTERIOR LOGO -->
+    <div class="next-text"> <!-- REVIEW OF JOURNALISM WEBSITE THAT SHOWS ON SCROLL -->
+      <h2>Eurogamer</h2>
+      <p>
+        “Creepy and unsettling... with a heaping dose of whimsy and wonder.”
+      </p>
+    </div>
+  </section>
+
+  <!-- INFORMATION FROM https://edithfinch.com/ -->
+  <section class="homeP2">
+    <img class="background" src="css/photos/bglogo.png" /> <!-- BACKGROUND PNG -->
+    <p class="desc"> <!-- INFORMATION HEADER -->
+      What Remains of Edith Finch is a collection of strange tales about a
+      family in Washington state.
+    </p>
+    <div class="desc2"> <!-- INFORMATION PARAGRAPHCS -->
+      <p>
+        As Edith, you'll explore the colossal Finch house, searching for
+        stories as she explores her family history and tries to figure out why
+        she's the last one in her family left alive. Each story you find lets
+        you experience the life of a new family member on the day of their
+        death, with stories ranging from the distant past to the present day.
+      </p> <br>
+
+      <p>
+        The gameplay and tone of the stories are as varied as the Finches
+        themselves. The only constants are that each is played from a
+        first-person perspective and that each story ends with that family
+        member's death.
+      </p> <br>
+
+      <p>
+        Ultimately, it's a game about what it feels like to be humbled and
+        astonished by the vast and unknowable world around us.
+      </p> <br>
+
+      <p>
+        Created by Giant Sparrow, the team behind the first-person painting
+        game The Unfinished Swan.
+      </p>
+    </div>
+
+    <!-- SECTION OF AWARDS -->
+    <div class="desc3"> 
+      <p class="advert1"> SOME AWARDS </p>
+      <div class="linksContainer" id="first">
+        <img src="css/photos/awards/award (1).png">
+        <img src="css/photos/awards/award (2).png">
+        <img src="css/photos/awards/award (3).png">
+        <img src="css/photos/awards/award (4).png">
+        <img src="css/photos/awards/award (5).png">
+      </div>
+    </div>
+
+    <!-- SECTION OF GAME SHOP LINKS -->
+    <div class="desc3">
+      <p class="advert"> PLAY NOW </p>
+      <div class="linksContainer" id="second"> <!-- LOGOS OF SHOPS WHERE YOU CAN CLICK TO REDIRECT -->
+        <a href="https://store.steampowered.com/app/501300/What_Remains_of_Edith_Finch/"> <img
+            src="css/photos/steam.png"> </a>
+        <a href="https://www.nintendo.com/store/products/what-remains-of-edith-finch-switch/"> <img
+            src="css/photos/switch.png"> </a>
+        <a href="https://www.xbox.com/en-us/games/store/what-remains-of-edith-finch/bslglg8p9t01"> <img
+            src="css/photos/xbox.png"> </a>
+        <a href="https://www.gog.com/game/what_remains_of_edith_finch?pp=8ef17f1c7e0a95ca709f520536f4ecffef1883e3"> <img
+            src="css/photos/gog.png"> </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer"> <!-- SECTION OF GAME SHOP LINKS -->
+    <a href=mailto:"finch@fortyseven.com" style="color:#dcc194"> CONTACT </a> 
+    <p> An Academic Project by Pauline Villahermosa</p>
+  </div>
+</body>
+
+</html>

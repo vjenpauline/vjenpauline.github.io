@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Volkhov";
+}
+
+html {
+  /* hides horizontal scroll bar */
+  overflow-x: hidden;
+}
+
+body {
+  animation-name: fadeIn;
+  /* fade animation when entering page */
+  animation-duration: 1s;
+  background-color: #000;
+}
+
+.backBtn {
+  /* BACK button for Character, Mechanics, Story, News&Info pages */
+  position: absolute;
+  z-index: 2;
+  color: white;
+  margin-left: 89em;
+  margin-top: 2em;
+  width: 70px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 4px;
+}
+
+.backBtn:hover {
+  color: black;
+  background-color: white;
+  border: none;
+  font-weight: 900;
+}
+
+.overlay {
+  /* Black overlay for intro parallax */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+}
+
+section.home {
+  /* Inner picture of parallax */
+  position: relative;
+  height: 10em;
+  width: 100%;
+  background: url(photos/introlayer2.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: #fff;
+}
+
+.bg-border {
+  /* Outer picture of parallax/Border */
+  position: relative;
+  height: 10em;
+  width: 100%;
+  background: url(photos/introlayer1.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  z-index: 1;
+}
+
+#logo {
+  /* Resizes middle logo */
+  width: 5em;
+}
+
+.next-text {
+  /* Feview text that shows when logo is out of view */
+  position: absolute;
+  font-size: 0.4em;
+  text-align: center;
+  padding: 15em;
+  opacity: 0;
+  z-index: 1;
+}
+
+.desc {
+  /* Header description of the Game */
+  font-size: 3em;
+  background: #000;
+  padding: 30vh 60vh 10vh 60vh;
+  line-height: 1em;
+  animation-fill-mode: forwards;
+  animation-name: change;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+
+.desc2 {
+  /* Text description of the Game */
+  font-size: 1.3em;
+  background: #000;
+  padding: 0 60vh 130vh 60vh;
+  line-height: 1.9em;
+  animation-fill-mode: forwards;
+  animation-name: change;
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+
+.navbar {
+  /* Top right navigation bar */
+  position: fixed;
+  margin-right: 1em;
+  right: 0%;
+  display: none;
+  z-index: 100;
+  transform: rotate(90deg);
+}
+
+@media only screen and (min-width: 50em) {
+  .navbar {
+    display: block;
+  }
+}
+
+.navbar #homeBtn {
+  white-space: pre-wrap;
+  margin: 1em 4em 1em 0;
+}
+
+.navbar>a { /* Top right navigation bar */
+  color: white;
+  display: block;
+  font-family: "Montserrat";
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 2;
+  text-decoration: none;
+  text-shadow: 2px 2px #000;
+}
+
+.navbar>a:hover {
+  opacity: 0.5;
+}
+
+.headerContainer { /* Container for Side Menu Button */
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  background-color: black;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.8rem;
+  height: 100%;
+  border-right: 1px solid white;
+}
+
+.logoContainer {
+  cursor: pointer;
+  position: relative;
+  height: 4.5rem;
+  width: 3rem;
+  height: 100%;
+}
+
+.headerBtn { /* Side Menu Button */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+.headerBtn img { /* Side Menu Button Logo */
+  margin: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* SIDE MENU CONTENTS */
+.sideMenu { 
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.747);
+  backdrop-filter: blur(5px);
+}
+
+.sideMenu>div {
+  height: 30%;
+  display: flex;
+}
+
+.sideMenu a {
+  position: relative;
+  line-height: 70%;
+  text-decoration: none;
+  color: #fef8f1;
+}
+
+.sideMenu a span {
+  font-size: 25px;
+  margin-right: 2em;
+}
+
+.headerItem {
+  position: relative;
+}
+
+.headerItem:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  margin: 0 auto;
+}
+
+.headerItem a:hover {
+  color: #dcc194;
+}
+
+.headerDrawer {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* LEFT SIDE 3 MAIN MENU TEXTS */
+.primaryMenu { 
+  font-family: "Arial Narrow";
+  text-shadow: 3px 3px 2px rgb(0, 0, 0);
+  font-weight: 600;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.primaryMenu .headerDrawer .headerMenu {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.primaryMenu li span {
+  font-family: "Volkhov";
+  font-weight: 100;
+  color: #dcc194;
+}
+
+.primaryMenu a {
+  z-index: 150;
+  font-size: 7em;
+}
+
+/* RIGHT SIDE 2 SUB MENU TEXTS */
+.secondaryMenu {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondaryMenu .headerItem a {
+  top: 200px;
+  left: 50px;
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.secondaryMenu .headerDrawer .headerMenu:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.homeP2 {
+  position: absolute;
+}
+
+.headerMenu { /* Animates the menu */
+  animation: fadeIn 7s alternate infinite;
+  list-style-type: none;
+}
+
+.background { /* White PNG background beside the text */
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 400px;
+  animation-name: zoom;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+
+.linksContainer {
+  padding-left: 360px;
+  padding-bottom: 200px;
+  background: #000;
+}
+
+.linksContainer img {
+  height: 70px;
+  margin-right: 20px;
+  opacity: 0.7;
+}
+
+#first img {
+  padding-left: 20px;
+}
+
+.linksContainer a {
+  text-decoration: none;
+}
+
+#second img:hover { /* Adds glow around shop images */
+  box-shadow: 0px 0px 10px 5px #656055;
+  opacity: 1;
+}
+
+.advert1 { /* Heading "SOME AWARDS" */
+  font-size: 3em;
+  padding-left: 620px;
+  padding-bottom: 80px;
+  background: #000;
+  color: #fef8f1;
+  line-height: 1em;
+  font-family: "Montserrat";
+}
+
+.advert { /* Heading "PLAY NOW" */
+  font-size: 3em;
+  padding-left: 650px;
+  padding-bottom: 80px;
+  background: #000;
+  color: #fef8f1;
+  line-height: 1em;
+  font-family: "Montserrat";
+}
+
+.footer { /* Footer with Contact and Name */
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  position: fixed;
+  margin-top: 40px;
+  padding: 20px;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  border-top: 1px solid white;
+  color: white;
+}
+
+/* Color change animation */
+@keyframes change {
+  from {
+    color: black;
+  }
+
+  to {
+    color: #a8a8a8;
+  }
+}
+
+/* Zoom animation */
+@keyframes zoom {
+  from {
+    width: 200%;
+  }
+
+  to {
+    width: 145%
+  }
+}
+
+/* Fade animation */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

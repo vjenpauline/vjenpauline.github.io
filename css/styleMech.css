@@ -1,0 +1,76 @@
+body { /* Background Picture */
+  background-image: url(photos/background4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 500px #000;
+  color: white;
+}
+
+section { /* Adds animation to page */
+  -webkit-animation-name: zoomIn;
+  animation-duration: 2s;
+  animation-name: zoomIn;
+}
+
+p { /* Styling text */
+  font-family: "Montserrat";
+  font-size: 1.5em;
+  margin: 50px 300px 0px 300px;
+  opacity: 0.6;
+}
+
+p:hover {
+  opacity: 1;
+}
+
+h1 { /* Styling the header */
+  -webkit-animation-name: zoomIn;
+  animation-duration: 2s;
+  animation-name: zoomIn;
+  color: #dcc194;
+  font-size: 10vh;
+  padding-top: 200px;
+  text-align: center;
+}
+
+h2 { /* Styling the 2nd header */
+  -webkit-animation-name: zoomIn;
+  animation-duration: 2s;
+  animation-name: zoomIn;
+  color: #dcc194;
+  font-family: "Montserrat";
+  font-size: 8vh;
+  font-weight: 500;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.YTContainer { /* Changes dimensions of video */
+  margin-left: 340px;
+  margin-top: 20px;
+}
+
+/* Zoom animation */
+@-webkit-keyframes zoomIn {
+  from {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

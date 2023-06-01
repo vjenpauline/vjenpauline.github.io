@@ -1,0 +1,80 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url(photos/background3.jpg);
+  box-shadow: inset 0 0 900px #000;
+}
+
+header, /* Adds zoom animation to page */
+section,
+main {
+  -webkit-animation-name: zoomIn;
+  animation-duration: 2s;
+  animation-name: zoomIn;
+}
+
+.post { /* Styles posts to be in two columns */
+  background: none repeat scroll 0% 0% transparent;
+  display: inline-flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  padding-right: 100px;
+}
+
+.news {
+  margin-left: 150px;
+}
+
+.logos {
+  width: 6vh;
+}
+
+h1 { 
+  color: #dcc194;
+  font-size: 10vh;
+  padding-top: 200px;
+  text-align: center;
+}
+
+.socmed { /* Stykes title and social media information, like positions it in the middle */
+  color: white;
+  font-size: 20px;
+  line-height: 70px;
+  margin-bottom: 100px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+h2 {
+  color: #dcc194;
+  font-family: "Montserrat";
+  font-size: 8vh;
+  font-weight: 500;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Zoom animation */
+@-webkit-keyframes zoomIn {
+  from {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
